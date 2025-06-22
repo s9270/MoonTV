@@ -8,6 +8,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
+module.exports = {
+  env: {
+    // 确保环境变量能传递到客户端
+    PASSWORD: process.env.PASSWORD,
+  },
+}
+
   /**
    * 在编译阶段把 storage.type 写入环境变量，供浏览器端动态切换存储方案。
    */
